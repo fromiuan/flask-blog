@@ -1,0 +1,46 @@
+{% extends "blog/layout.html" %}
+{% block title %}概述{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+<body>
+<article>
+    <div class="l_box" id="stickMe">
+      <div class="about_me">
+        <h2>关于我</h2>
+        <ul>
+          <i><img src="{{ aboutMeImg.value }}"></i>
+          <p>{{ aboutMe.value }}</p>
+        </ul>
+      </div>
+        {% include 'blog/left.html' %}
+      <div class="links">
+        <h2>友情链接</h2>
+        <ul>
+          <a href="#m">百度</a>
+        </ul>
+      </div>
+      <div class="guanzhu">
+        <h2>关注我 么么哒</h2>
+        <ul>
+          <img src="images/wx.jpg">
+        </ul>
+      </div>
+    </div>
+  <div class="r_box">
+      {% for list in article_list %}
+    <li>
+        {% if list.img != "" %}
+        <i><a href="/article?id={{ list.id }}"><img src="{{ list.img }}"></a></i>
+        {% endif %}
+        <h3><a href="/article?id={{ list.id }}">{{ list.title }}</a></h3>
+        <p>{{ list.description }}</p>
+    </li>
+    {% endfor %}
+  </div>
+</article>
+{% endblock %}

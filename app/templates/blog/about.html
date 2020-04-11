@@ -1,0 +1,35 @@
+{% extends "blog/layout.html" %}
+{% block title %}概述{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+<article>
+  <aside>
+  <div class="l_box">
+    <div class="about_me">
+      <h2>关于我</h2>
+      <ul>
+        <i><img src="images/4.jpg"></i>
+        <p><b></b>，一个80后草根女站长！09年入行。一直潜心研究web前端技术，一边工作一边积累经验，分享一些个人博客模板，以及SEO优化等心得。</p>
+      </ul>
+    </div>
+    <div class="guanzhu">
+      <h2>关注我 么么哒</h2>
+      <ul>
+        <img src="images/wx.jpg">
+      </ul>
+    </div>
+  </div>
+  </aside>
+  <div class="r_box">
+     <ul class="about">
+      {{ about.value | safe }}
+
+     </ul>
+  </div>
+</article>
+{% endblock %}

@@ -1,0 +1,152 @@
+{% extends "admin/layout.html" %}
+{% block title %}文章{% endblock %}
+{% block head %}
+  {{ super() }}
+    <script type="text/javascript" charset="utf-8" src="{{ url_for('static', filename='admin/ueditor/ueditor.config.js') }}"></script>
+    <script type="text/javascript" charset="utf-8" src="{{ url_for('static', filename='admin/ueditor/ueditor.all.min.js') }}"> </script>
+    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+    <script type="text/javascript" charset="utf-8" src="{{ url_for('static', filename='admin/ueditor/lang/zh-cn/zh-cn.js') }}"></script>
+    <script type="text/javascript">
+        var ue = UE.getEditor('content', {
+            serverUrl: "/admin/upload"
+        });
+    </script>
+    <link href="{{ url_for('static', filename='admin/css/pages/reports.css') }}" rel="stylesheet">
+{% endblock %}
+{% block content %}
+  <!-- main -->
+    <div class="main">
+        <div class="main-inner">
+            <div class="container">
+             <div class="row">
+                <div class="span12">
+                   <div class="row-fluid">
+                      <div class="widget-content">
+                         <div class="tab-content">
+							 <div class="tab-pane active" id="formcontrols">
+								<form id="edit-profile" class="form-horizontal" method="POST" action="">
+									<fieldset>
+                                        <input type="hidden" name="id" value="{{ article_info.id }}">
+										<div class="control-group">
+											<label class="control-label" for="firstname">标题</label>
+											<div class="controls">
+												<input type="text" class="span6" id="title" name="title" value="{{ article_info.title }}">
+											</div> <!-- /controls -->
+										</div> <!-- /control-group -->
+
+
+										<div class="control-group">
+											<label class="control-label" for="lastname">分类</label>
+											<div class="controls">
+                                                <select name="category_id" id="category_id">
+                                                    <option value="0" {% if article_info.id==0 %}selected="selected"{% endif %}>顶级分类</option>
+                                                    {% for list in category_list %}
+                                                    <option value="{{ list.id }}" {% if article_info.category_id==list.id %}selected="selected"{% endif %}>{{ list.level*'—' }}{{ list.name }}</option>
+                                                    {% endfor %}
+                                                </select>
+											</div> <!-- /controls -->
+										</div> <!-- /control-group -->
+
+                                        <div class="control-group">
+											<label class="control-label" for="email">摘要</label>
+											<div class="controls">
+                                                <textarea rows="3" cols="80" id="descript" style="width: 504px;"  name="description">{{ article_info.description }}</textarea>
+											</div> <!-- /controls -->
+										</div> <!-- /control-group -->
+
+										<div class="control-group">
+											<label class="control-label" for="email">内容</label>
+											<div class="controls">
+                                                <textarea rows="5" cols="80" id="content" name="content">
+                                                    {{ article_info.content }}
+                                                </textarea>
+											</div> <!-- /controls -->
+										</div> <!-- /control-group -->
+                                    <div class="control-group">
+											<label class="control-label">标签</label>
+											<div class="controls">
+                                                <input type="radio" id="flag" name="flag" value="1" {% if article_info.flag == 0 %}checked{% endif %}> 置顶
+                                                <input type="radio" id="flag" name="flag" value="2" {% if article_info.flag == 1 %}checked{% endif %}> 推荐
+											</div> <!-- /controls -->
+										</div> <!-- /control-group -->
+                                        <div class="control-group">
+											<label class="control-label" for="radiobtns"> 阅读数 </label>
+
+                                            <div class="controls">
+                                               <div class="input-append">
+                                                   <input type="text" class="span8 span2 m-wrap" id="views" name="views" value="{{ article_info.views }}">
+                                                </div>
+                                              </div>	<!-- /controls -->
+										</div> <!-- /control-group -->
+
+                                        <div class="control-group">
+											<label class="control-label" for="radiobtns">标签</label>
+
+                                            <div class="controls">
+                                                <div class="input-append">
+                                                  <input class="span2 m-wrap" id="addtag" type="text">
+                                                  <button class="btn" type="button" onclick="addtags()">添加</button>
+                                                </div>
+                                              <div class="btn-group" id="tag-group">
+                                                    {% for list in article_info.tags %}
+                                                    <span class="tag-box">
+                                                          <input class="btn btn-primary" type="text" name="tags" value="{{ list.name }}" style="width: 50px;">
+                                                          <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#" onclick="removeTag(this,{{ list.id }},{{ article_info.id }})" style="height: 18px;">x</a>
+                                                    </span>
+                                                  {% endfor %}
+                                              </div>
+
+                                            </div>	<!-- /controls -->
+										</div> <!-- /control-group -->
+
+										<div class="form-actions">
+											<button type="submit" class="btn btn-primary">Save</button>
+											<button class="btn">Cancel</button>
+										</div> <!-- /form-actions -->
+									</fieldset>
+								</form>
+                             </div>
+
+
+							</div>
+                        </div>
+                   </div>
+                </div>
+             </div>
+              <!-- /row -->
+            </div> <!-- /container -->
+
+        </div> <!-- /main-inner -->
+
+    </div> <!-- /main -->
+
+  <!-- /main -->
+    <script>
+        function addtags(){
+            tagValue = $('#addtag').val();
+            innerHtml = `<span class="tag-box">
+                  <input class="btn btn-primary" type="text" name="tags" value="`+tagValue+`" style="width: 50px;">
+                  <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#" onclick="removeTag(this),0,0" style="height: 18px;">x</a>
+            </span>`;
+            $('#tag-group').append(innerHtml);
+            $('#addtag').val('');
+        }
+
+        function removeTag(that,tag_id,article_id){
+            $.ajax({
+                url:'/admin/article/tag_del',
+                data:{'article_id':article_id,'tag_id':tag_id},
+                type:'get',
+                success:function(data){
+                    console.info(data);
+                    if (data.result != 'ok'){
+                        alert('删除失败');
+                    }else{
+                        $(that).parent().remove();
+                    }
+                }
+            });
+        }
+    </script>
+{% endblock %}
