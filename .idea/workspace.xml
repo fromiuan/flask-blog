@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f5eccb6-8fd2-4c71-88ee-cd138292bd76" name="Default Changelist" comment="" />
+    <list default="true" id="7f5eccb6-8fd2-4c71-88ee-cd138292bd76" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/uploads/20200326/023b5bb5c9ea15ce36f49b25bc003af33a87b287.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/uploads/20200326/4513927805d207eeb11a109fe439d9745f293fe74d3ba-niRcwW_fw658.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/uploads/20200326/45915cc351a8d14fd4e08be13eb9296feacbbabc4d54c-mjziaD_fw658.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/uploads/20200326/573b201979c7c4e8f61e4a4afc5aacc0822d03bd62d2d-rWoAp3_fw658.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/uploads/20200401/preview.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/uploads/20200401/timg (1).jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/uploads/20200401/timg (2).jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/uploads/20200403/timg (4).jpeg" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,13 +94,31 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-1661583677">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="gitignore" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PLAIN_TEXT" value="4" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
+            <state relative-caret-position="1065">
               <caret line="72" column="11" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="11" />
               <folding>
                 <marker date="1585928989642" expanded="true" signature="148:1192" ph="..." />
@@ -99,7 +128,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/utils.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
@@ -111,7 +140,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state relative-caret-position="45">
               <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
               <folding>
                 <element signature="e#43#69#0" expanded="true" />
@@ -121,9 +150,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -143,7 +176,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4033">
+            <state relative-caret-position="3915">
               <caret line="269" column="104" selection-start-line="269" selection-start-column="104" selection-end-line="269" selection-end-column="104" />
               <folding>
                 <element signature="e#42#139#0" expanded="true" />
@@ -173,7 +206,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13">
+            <state relative-caret-position="15">
               <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
               <folding>
                 <element signature="e#42#81#0" expanded="true" />
@@ -229,6 +262,9 @@
       <find>新增</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -278,6 +314,7 @@
         <option value="$PROJECT_DIR$/app/blog.py" />
         <option value="$PROJECT_DIR$/app/templates/admin/layout.html" />
         <option value="$PROJECT_DIR$/app/__init__.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -302,13 +339,8 @@
         <subPane>
           <expand>
             <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="flask-blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flask-blog" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -401,7 +433,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1898223" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.19224556" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="1" />
@@ -645,7 +677,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
+        <state relative-caret-position="1065">
           <caret line="72" column="11" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="11" />
           <folding>
             <marker date="1585928989642" expanded="true" signature="148:1192" ph="..." />
@@ -654,8 +686,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+          <folding>
+            <element signature="e#43#69#0" expanded="true" />
+            <marker date="1584802773017" expanded="true" signature="126:127" ph="..." />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitattributes">
       <provider selected="true" editor-type-id="text-editor" />
@@ -664,6 +704,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3915">
+          <caret line="269" column="104" selection-start-line="269" selection-start-column="104" selection-end-line="269" selection-end-column="104" />
+          <folding>
+            <element signature="e#42#139#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -683,7 +733,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13">
+        <state relative-caret-position="15">
           <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
           <folding>
             <element signature="e#42#81#0" expanded="true" />
@@ -693,31 +743,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4033">
-          <caret line="269" column="104" selection-start-line="269" selection-start-column="104" selection-end-line="269" selection-end-column="104" />
-          <folding>
-            <element signature="e#42#139#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-          <folding>
-            <element signature="e#43#69#0" expanded="true" />
-            <marker date="1584802773017" expanded="true" signature="126:127" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="19" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
         </state>
       </provider>
     </entry>
